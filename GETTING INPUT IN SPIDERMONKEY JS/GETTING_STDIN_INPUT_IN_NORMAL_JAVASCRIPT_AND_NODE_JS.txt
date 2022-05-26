@@ -1,0 +1,40 @@
+GETTING STDIN INPUT IN NORMAL JAVASCRIPT AND NODE JS:
+
+REFERENCE LINK:
+https://stackoverflow.com/questions/3120761/how-do-i-get-console-input-in-spidermonkey-javascript
+https://pokval19.kattis.com/help/javascriptspidermonkey
+
+
+GETTING STDIN INPUT IN NORMAL JAVASCRIPT LIKE SPIDERMONKEY JS:
+
+
+let inp1 = readline();
+let inp2 = readline();
+
+console.log('inp1=',inp1);
+console.log('inp2=',inp2);
+
+
+
+GETTING STDIN INPUT IN NODE JS:
+
+
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  
+
+console.log(userInput);
+ 
+  
+});
